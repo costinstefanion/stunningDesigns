@@ -275,7 +275,7 @@ function receivedMessage(event) {
         sendFileMessage(senderID);
         break;
 
-      case 'button':
+      case 'remix':
         sendButtonMessage(senderID);
         break;
 
@@ -547,19 +547,11 @@ function sendButtonMessage(recipientId) {
         type: "template",
         payload: {
           template_type: "button",
-          text: "This is test text",
+          text: "Remix",
           buttons:[{
             type: "web_url",
-            url: "https://www.oculus.com/en-us/rift/",
-            title: "Open Web URL"
-          }, {
-            type: "postback",
-            title: "Trigger Postback",
-            payload: "DEVELOPED_DEFINED_PAYLOAD"
-          }, {
-            type: "phone_number",
-            title: "Call Phone Number",
-            payload: "+16505551234"
+            url: "https://spark.adobe.com/post/qhzu2",
+            title: "Remix Design"
           }]
         }
       }
