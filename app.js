@@ -275,11 +275,11 @@ function receivedMessage(event) {
         sendFileMessage(senderID);
         break;
 
-      case 'remix':
+      case 'button':
         sendButtonMessage(senderID);
         break;
 
-      case 'generic':
+      case 'autumn festival':
         sendGenericMessage(senderID);
         break;
 
@@ -547,7 +547,7 @@ function sendButtonMessage(recipientId) {
         type: "template",
         payload: {
           template_type: "button",
-          text: "Remix",
+          text: "Spark Post",
           buttons:[{
             type: "web_url",
             url: "https://spark.adobe.com/post/qhzu2",
@@ -576,32 +576,14 @@ function sendGenericMessage(recipientId) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "rift",
-            subtitle: "Next-generation virtual reality",
-            item_url: "https://www.oculus.com/en-us/rift/",               
-            image_url: SERVER_URL + "/assets/rift.png",
+            title: "Autumn Festival",
+            subtitle: "Adobe Sparl Post",
+            item_url: "https://spark.adobe.com/post/qhzu2",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/20c139f2-f81a-4fcc-ad22-c4b7a631f624/artwork/81b00a15-3bbd-4aaa-8d47-de3145b987ef/version/0/format/jpg/dimension/width/size/1200",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
-              title: "Open Web URL"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for first bubble",
-            }],
-          }, {
-            title: "touch",
-            subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",               
-            image_url: SERVER_URL + "/assets/touch.png",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
-              title: "Open Web URL"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
+              url: "https://spark.adobe.com/post/qhzu2",
+              title: "Remix Design"
             }]
           }]
         }
