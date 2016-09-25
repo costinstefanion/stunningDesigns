@@ -621,6 +621,9 @@ function sendGenericMessageAutumn(recipientId) {
       }
     }
   };  
+    callSendAPI(messageData);
+}
+
 
 function sendGenericMessage(recipientId) {
   var messageData = {
@@ -641,8 +644,9 @@ function sendGenericMessage(recipientId) {
               type: "web_url",
               url: "https://spark.adobe.com/post/qhzu2",
               title: "Remix Design"
-            },
-            {
+            }]
+          },
+          {
             title: "Adventures",
             subtitle: "Adobe Spark Post",
             item_url: "https://spark.adobe.com/post/DhHRj",               
@@ -651,16 +655,16 @@ function sendGenericMessage(recipientId) {
               type: "web_url",
               url: "https://spark.adobe.com/post/DhHRj",
               title: "Remix Design"
-            }
-            ]
-          }]
+            }]
+          }
+          ]
         }
       }
     }
   };  
-
-  callSendAPI(messageData);
+    callSendAPI(messageData);
 }
+
 
 /*
  * Send a receipt message using the Send API.
