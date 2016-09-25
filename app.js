@@ -254,58 +254,59 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
-    switch (messageText) {
-      case 'image':
-        sendImageMessage(senderID);
+    switch (messageText.toUpperCase()) {
+      // case 'image':
+      //   sendImageMessage(senderID);
+      //   break;
+
+      // case 'gif':
+      //   sendGifMessage(senderID);
+      //   break;
+
+      // case 'audio':
+      //   sendAudioMessage(senderID);
+      //   break;
+
+      // case 'video':
+      //   sendVideoMessage(senderID);
+      //   break;
+
+      // case 'file':
+      //   sendFileMessage(senderID);
+      //   break;
+
+      // case 'button':
+      //   sendButtonMessage(senderID);
+      //   break;
+
+      case 'autumn festival'.toUpperCase():
+        sendGenericMessageAutumn(senderID);
         break;
 
-      case 'gif':
-        sendGifMessage(senderID);
-        break;
-
-      case 'audio':
-        sendAudioMessage(senderID);
-        break;
-
-      case 'video':
-        sendVideoMessage(senderID);
-        break;
-
-      case 'file':
-        sendFileMessage(senderID);
-        break;
-
-      case 'button':
-        sendButtonMessage(senderID);
-        break;
-
-      case 'autumn festival':
-        sendGenericMessage(senderID);
-        break;
-
-      case 'adventure':
+      case 'adventures'.toUpperCase():
         sendGenericMessageAdventures(senderID);
         break;
 
-      case 'quick reply':
-        sendQuickReply(senderID);
-        break;        
 
-      case 'read receipt':
-        sendReadReceipt(senderID);
-        break;        
+      // case 'quick reply':
+      //   sendQuickReply(senderID);
+      //   break;        
 
-      case 'typing on':
-        sendTypingOn(senderID);
-        break;        
+      // case 'read receipt':
+      //   sendReadReceipt(senderID);
+      //   break;        
 
-      case 'typing off':
-        sendTypingOff(senderID);
-        break;        
+      // case 'typing on':
+      //   sendTypingOn(senderID);
+      //   break;        
 
-      case 'account linking':
-        sendAccountLinking(senderID);
-        break;
+      // case 'typing off':
+      //   sendTypingOff(senderID);
+      //   break;        
+
+      // case 'account linking':
+      //   sendAccountLinking(senderID);
+      //   break;
 
       default:
         sendTextMessage(senderID, messageText);
@@ -595,7 +596,7 @@ function sendGenericMessageAdventures(recipientId) {
   callSendAPI(messageData);
 }
 
-function sendGenericMessage(recipientId) {
+function sendGenericMessageAutumn(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -615,6 +616,43 @@ function sendGenericMessage(recipientId) {
               url: "https://spark.adobe.com/post/qhzu2",
               title: "Remix Design"
             }]
+          }]
+        }
+      }
+    }
+  };  
+
+function sendGenericMessage(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "Autumn Festival",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/qhzu2",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/20c139f2-f81a-4fcc-ad22-c4b7a631f624/artwork/81b00a15-3bbd-4aaa-8d47-de3145b987ef/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/qhzu2",
+              title: "Remix Design"
+            },
+            {
+            title: "Adventures",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/DhHRj",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/80fdf504-fcb3-45b5-a74c-7415fcb09cf8/artwork/91a6294a-d2b7-4a6f-8a1e-3d6c0b73b16b/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/DhHRj",
+              title: "Remix Design"
+            }
+            ]
           }]
         }
       }
