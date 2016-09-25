@@ -283,8 +283,8 @@ function receivedMessage(event) {
         sendGenericMessage(senderID);
         break;
 
-      case 'receipt':
-        sendReceiptMessage(senderID);
+      case 'adventure':
+        sendGenericMessageAdventures(senderID);
         break;
 
       case 'quick reply':
@@ -565,6 +565,36 @@ function sendButtonMessage(recipientId) {
  * Send a Structured Message (Generic Message type) using the Send API.
  *
  */
+
+function sendGenericMessageAdventures(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "Adventures",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/DhHRj",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/80fdf504-fcb3-45b5-a74c-7415fcb09cf8/artwork/91a6294a-d2b7-4a6f-8a1e-3d6c0b73b16b/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/DhHRj",
+              title: "Remix Design"
+            }]
+          }]
+        }
+      }
+    }
+  };  
+
+  callSendAPI(messageData);
+}
+
 function sendGenericMessage(recipientId) {
   var messageData = {
     recipient: {
@@ -577,7 +607,7 @@ function sendGenericMessage(recipientId) {
           template_type: "generic",
           elements: [{
             title: "Autumn Festival",
-            subtitle: "Adobe Sparl Post",
+            subtitle: "Adobe Spark Post",
             item_url: "https://spark.adobe.com/post/qhzu2",               
             image_url: "https://cdn.cp.adobe.io/content/2/rendition/20c139f2-f81a-4fcc-ad22-c4b7a631f624/artwork/81b00a15-3bbd-4aaa-8d47-de3145b987ef/version/0/format/jpg/dimension/width/size/1200",
             buttons: [{
