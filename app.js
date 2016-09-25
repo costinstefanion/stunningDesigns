@@ -283,6 +283,10 @@ function receivedMessage(event) {
         sendGenericMessageAutumn(senderID);
         break;
 
+      case 'autumn'.toUpperCase():
+        sendGenericMessageAutumn(senderID);
+        break;
+
       case 'autumn festival'.toUpperCase():
         sendGenericMessageAutumn(senderID);
         break;
@@ -313,7 +317,7 @@ function receivedMessage(event) {
       //   break;
 
       default:
-        //sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "We couldn't find any designs for " + messageText + " Here's some inspiration!");
         sendGenericMessage(senderID);
     }
   } else if (messageAttachments) {
