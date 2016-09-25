@@ -279,6 +279,10 @@ function receivedMessage(event) {
       //   sendButtonMessage(senderID);
       //   break;
 
+      case 'fall'.toUpperCase():
+        sendGenericMessageAutumn(senderID);
+        break;
+
       case 'autumn festival'.toUpperCase():
         sendGenericMessageAutumn(senderID);
         break;
@@ -309,7 +313,8 @@ function receivedMessage(event) {
       //   break;
 
       default:
-        sendTextMessage(senderID, messageText);
+        //sendTextMessage(senderID, messageText);
+        sendGenericMessage(senderID);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
