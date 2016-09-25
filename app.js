@@ -279,6 +279,18 @@ function receivedMessage(event) {
       //   sendButtonMessage(senderID);
       //   break;
 
+      case 'travel'.toUpperCase():
+        sendGenericMessageTravel(senderID);
+        break;
+
+      case 'vacation'.toUpperCase():
+        sendGenericMessageTravel(senderID);
+        break;
+
+      case 'trip'.toUpperCase():
+        sendGenericMessageTravel(senderID);
+        break;
+
       case 'fall'.toUpperCase():
         sendGenericMessageAutumn(senderID);
         break;
@@ -596,7 +608,19 @@ function sendGenericMessageAdventures(recipientId) {
               url: "https://spark.adobe.com/post/DhHRj",
               title: "Remix Design"
             }]
-          }]
+          },
+          {
+            title: "Adventurous",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/rC6ea",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/28a1f68e-eb8d-4d5f-b71d-adf49c910663/artwork/63a9b87c-9ec1-429f-ae8e-afc87453aedb/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/rC6ea",
+              title: "Remix Design"
+            }]
+          }
+          ]
         }
       }
     }
@@ -633,6 +657,106 @@ function sendGenericMessageAutumn(recipientId) {
     callSendAPI(messageData);
 }
 
+function sendGenericMessageTravel(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "Discover Joshua tree",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/ZnWpv",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/6a51f173-e318-4905-93d6-de5be60198b0/artwork/3dcf6f52-35dc-4a70-95a8-90c3059d0bc6/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/ZnWpv",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Let's go explore",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/p237V",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/c60fc424-1278-469b-9ec3-39bae81450a9/artwork/9067eb05-bacd-468d-b5e9-6d15bc3f69e0/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/p237V",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Adventurous",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/rC6ea",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/28a1f68e-eb8d-4d5f-b71d-adf49c910663/artwork/63a9b87c-9ec1-429f-ae8e-afc87453aedb/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/rC6ea",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Hollywood",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/heDjy",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/f6504e69-a21d-4f43-ab33-846d35bccac8/artwork/07cca03d-f04d-4649-941d-eff82fc1d566/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/heDjy",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "San Francisco",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/lhxxC",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/67065802-15fb-4e2a-ba54-9d94a59cca13/artwork/07c87d5a-f3e1-4be0-ac10-27b57d375b2c/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/lhxxC",
+              title: "Remix Design"
+            }]
+          }
+          ]
+        }
+      }
+    }
+  };  
+    callSendAPI(messageData);
+}
+
+function sendGenericMessageFood(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
+            title: "Autumn Festival",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/qhzu2",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/20c139f2-f81a-4fcc-ad22-c4b7a631f624/artwork/81b00a15-3bbd-4aaa-8d47-de3145b987ef/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/qhzu2",
+              title: "Remix Design"
+            }]
+          }]
+        }
+      }
+    }
+  };  
+    callSendAPI(messageData);
+}
 
 function sendGenericMessage(recipientId) {
   var messageData = {
@@ -663,6 +787,61 @@ function sendGenericMessage(recipientId) {
             buttons: [{
               type: "web_url",
               url: "https://spark.adobe.com/post/DhHRj",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Discover Joshua tree",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/ZnWpv",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/6a51f173-e318-4905-93d6-de5be60198b0/artwork/3dcf6f52-35dc-4a70-95a8-90c3059d0bc6/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/ZnWpv",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Let's go explore",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/p237V",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/c60fc424-1278-469b-9ec3-39bae81450a9/artwork/9067eb05-bacd-468d-b5e9-6d15bc3f69e0/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/p237V",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Adventurous",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/rC6ea",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/28a1f68e-eb8d-4d5f-b71d-adf49c910663/artwork/63a9b87c-9ec1-429f-ae8e-afc87453aedb/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/rC6ea",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Hollywood",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/heDjy",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/f6504e69-a21d-4f43-ab33-846d35bccac8/artwork/07cca03d-f04d-4649-941d-eff82fc1d566/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/heDjy",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "San Francisco",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/lhxxC",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/67065802-15fb-4e2a-ba54-9d94a59cca13/artwork/07c87d5a-f3e1-4be0-ac10-27b57d375b2c/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/lhxxC",
               title: "Remix Design"
             }]
           }
