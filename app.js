@@ -290,6 +290,10 @@ function receivedMessage(event) {
       case 'trip'.toUpperCase():
         sendGenericMessageTravel(senderID);
         break;
+      
+      case 'food'.toUpperCase():
+        sendGenericMessageFood(senderID);
+        break;
 
       case 'fall'.toUpperCase():
         sendGenericMessageAutumn(senderID);
@@ -304,6 +308,10 @@ function receivedMessage(event) {
         break;
 
       case 'adventures'.toUpperCase():
+        sendGenericMessageAdventures(senderID);
+        break;
+
+      case 'adventure'.toUpperCase():
         sendGenericMessageAdventures(senderID);
         break;
 
@@ -649,7 +657,30 @@ function sendGenericMessageAutumn(recipientId) {
               url: "https://spark.adobe.com/post/qhzu2",
               title: "Remix Design"
             }]
-          }]
+          },
+          {
+            title: "Best outfits for fall",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/InZSP",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/1d423f0c-ca9e-499e-96fa-7a552bc4a991/artwork/83add8b3-fc63-4280-85cc-9ede096c8bce/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/InZSP",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Halloween",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/o8faF",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/f22ca52e-cd51-4bbe-ab75-2cc46afe3daf/artwork/cbc576a3-86af-470f-a9c6-a6f8fd914a91/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/o8faF",
+              title: "Remix Design"
+            }]
+          }
+          ]
         }
       }
     }
@@ -721,6 +752,17 @@ function sendGenericMessageTravel(recipientId) {
               url: "https://spark.adobe.com/post/lhxxC",
               title: "Remix Design"
             }]
+          },
+          {
+            title: "London Calling",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/Eml5t",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/253af116-f81e-4115-ae27-b84b2cbedb02/artwork/c14a46e6-9227-4c4f-ac6b-fc632eb18a73/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/Eml5t",
+              title: "Remix Design"
+            }]
           }
           ]
         }
@@ -741,13 +783,13 @@ function sendGenericMessageFood(recipientId) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "Autumn Festival",
+            title: "Food arrangement",
             subtitle: "Adobe Spark Post",
-            item_url: "https://spark.adobe.com/post/qhzu2",               
-            image_url: "https://cdn.cp.adobe.io/content/2/rendition/20c139f2-f81a-4fcc-ad22-c4b7a631f624/artwork/81b00a15-3bbd-4aaa-8d47-de3145b987ef/version/0/format/jpg/dimension/width/size/1200",
+            item_url: "https://spark.adobe.com/post/wl13D",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/5e439638-92b3-45a8-b625-d6589ca6e1cf/artwork/9bcd804b-1e7b-431e-9cf3-910cef6fdc53/version/0/format/jpg/dimension/width/size/1200",
             buttons: [{
               type: "web_url",
-              url: "https://spark.adobe.com/post/qhzu2",
+              url: "https://spark.adobe.com/post/wl13D",
               title: "Remix Design"
             }]
           }]
@@ -768,7 +810,19 @@ function sendGenericMessage(recipientId) {
         type: "template",
         payload: {
           template_type: "generic",
-          elements: [{
+          elements: [
+          {
+            title: "London Calling",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/Eml5t",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/253af116-f81e-4115-ae27-b84b2cbedb02/artwork/c14a46e6-9227-4c4f-ac6b-fc632eb18a73/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/Eml5t",
+              title: "Remix Design"
+            }]
+          },
+          {
             title: "Autumn Festival",
             subtitle: "Adobe Spark Post",
             item_url: "https://spark.adobe.com/post/qhzu2",               
@@ -787,6 +841,17 @@ function sendGenericMessage(recipientId) {
             buttons: [{
               type: "web_url",
               url: "https://spark.adobe.com/post/DhHRj",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Food arrangement",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/wl13D",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/5e439638-92b3-45a8-b625-d6589ca6e1cf/artwork/9bcd804b-1e7b-431e-9cf3-910cef6fdc53/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/wl13D",
               title: "Remix Design"
             }]
           },
