@@ -283,6 +283,18 @@ function receivedMessage(event) {
         sendGenericMessageTravel(senderID);
         break;
 
+      case 'London'.toUpperCase():
+        sendGenericMessageTravel(senderID);
+        break;
+
+      case 'san francisco'.toUpperCase():
+        sendGenericMessageTravel(senderID);
+        break;
+
+      case 'labor day'.toUpperCase():
+        sendGenericMessage(senderID);
+        break;
+
       case 'vacation'.toUpperCase():
         sendGenericMessageTravel(senderID);
         break;
@@ -337,7 +349,7 @@ function receivedMessage(event) {
       //   break;
 
       default:
-        sendTextMessage(senderID, "We couldn't find any designs for " + messageText + " Here's some inspiration!");
+        sendTextMessage(senderID, "We couldn't find any designs for " + messageText + ". Here's some inspiration!");
         sendGenericMessage(senderID);
     }
   } else if (messageAttachments) {
@@ -670,6 +682,17 @@ function sendGenericMessageAutumn(recipientId) {
             }]
           },
           {
+            title: "Apple harvest festival",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/CGjlQ",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/86ba2c03-c506-45b6-b4b6-b93e4401564e/artwork/26b1c971-d079-4180-adf2-fc5e40889f8b/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/CGjlQ",
+              title: "Remix Design"
+            }]
+          },
+          {
             title: "Halloween",
             subtitle: "Adobe Spark Post",
             item_url: "https://spark.adobe.com/post/o8faF",               
@@ -792,7 +815,19 @@ function sendGenericMessageFood(recipientId) {
               url: "https://spark.adobe.com/post/wl13D",
               title: "Remix Design"
             }]
-          }]
+          },
+          {
+            title: "Apple harvest festival",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/CGjlQ",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/86ba2c03-c506-45b6-b4b6-b93e4401564e/artwork/26b1c971-d079-4180-adf2-fc5e40889f8b/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/CGjlQ",
+              title: "Remix Design"
+            }]
+          }
+          ]
         }
       }
     }
@@ -830,6 +865,17 @@ function sendGenericMessage(recipientId) {
             buttons: [{
               type: "web_url",
               url: "https://spark.adobe.com/post/qhzu2",
+              title: "Remix Design"
+            }]
+          },
+          {
+            title: "Apple harvest festival",
+            subtitle: "Adobe Spark Post",
+            item_url: "https://spark.adobe.com/post/CGjlQ",               
+            image_url: "https://cdn.cp.adobe.io/content/2/rendition/86ba2c03-c506-45b6-b4b6-b93e4401564e/artwork/26b1c971-d079-4180-adf2-fc5e40889f8b/version/0/format/jpg/dimension/width/size/1200",
+            buttons: [{
+              type: "web_url",
+              url: "https://spark.adobe.com/post/CGjlQ",
               title: "Remix Design"
             }]
           },
