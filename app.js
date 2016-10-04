@@ -327,6 +327,10 @@ function receivedMessage(event) {
         sendGenericMessageAdventures(senderID);
         break;
 
+      case 'hello'.toUpperCase():
+        sendTextMessage(senderID, "Good morning Costin! Looking for inspiration? Let us know what you want to create today!");
+        break;
+
 
       // case 'quick reply':
       //   sendQuickReply(senderID);
