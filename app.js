@@ -309,6 +309,7 @@ function receivedMessage(event) {
         break;
 
       case 'fall'.toUpperCase():
+        sendTextMessage(senderID, "I love fall! What do you think about our fall collection?");
         sendGenericMessageAutumn(senderID);
         break;
 
