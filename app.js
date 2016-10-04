@@ -280,6 +280,7 @@ function receivedMessage(event) {
       //   break;
 
       case 'travel'.toUpperCase():
+        sendTextMessage(senderID, "Great! Here's some designs that you can use to start with!");
         sendGenericMessageTravel(senderID);
         break;
 
